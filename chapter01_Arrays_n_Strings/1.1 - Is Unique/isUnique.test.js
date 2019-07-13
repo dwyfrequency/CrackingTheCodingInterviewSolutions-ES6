@@ -1,4 +1,4 @@
-import { isUnique } from './isUniqueES6';
+const { isUnique } = require('./isUniqueES6');
 
 test('strings with same characters should fail ', () => {
   const result = isUnique('hannah');
@@ -15,7 +15,7 @@ test('strings with same characters should fail ', () => {
   expect(result).toBeFalsy();
 });
 
-test('strings with all uniwur characters should fail succeed', () => {
-  const result = isUnique('abecde');
+test('strings with all unque characters should succeed', () => {
+  const result = isUnique('abcde');
   expect(result).toBeTruthy();
 });

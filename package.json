@@ -5,7 +5,11 @@
   "main": "index.js",
   "author": "dwyfrequency <jdwy215@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "parcel": "^1.12.3"
   }
 }
