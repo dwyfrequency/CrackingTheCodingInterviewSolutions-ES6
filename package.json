@@ -4,5 +4,8 @@
   "description": "Cracking The Coding Interview Solutions in Javascript with the Lastest J",
   "main": "index.js",
   "author": "dwyfrequency <jdwy215@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.8.0"
+  }
 }
