@@ -1,5 +1,4 @@
-var allUniqueChars = function(string) {
-  
+var allUniqueCharsES5 = function(string) {
   // O(n^2) approach, no additional data structures used
   // for each character, check remaining characters for duplicates
   for (var i = 0; i < string.length; i++) {
@@ -12,5 +11,16 @@ var allUniqueChars = function(string) {
   return true; // if no match, return true
 };
 
-/* TESTS */
-// log some tests here
+// Time O(n^2) | Space O(1)
+const isUnique = str => {
+  for (let i = 0; i < str.length - 1; i++) {
+    for (let j = i + 1; j < str.length; j++) {
+      if (str[i] === str[j]) return false;
+    }
+  }
+  return true;
+};
+
+module.exports = {
+  isUnique,
+};

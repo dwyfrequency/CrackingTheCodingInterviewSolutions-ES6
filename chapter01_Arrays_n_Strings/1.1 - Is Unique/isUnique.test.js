@@ -1,4 +1,4 @@
-const { isUnique } = require('./isUniqueES6');
+const { isUnique } = require('./isUnique');
 
 test('strings with same characters should fail ', () => {
   const result = isUnique('hannah');
