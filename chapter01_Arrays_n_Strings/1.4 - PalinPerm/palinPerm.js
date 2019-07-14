@@ -1,34 +1,38 @@
-var palinPerm = function(string) {
-  // create object literal to store charcount
-  var chars = {};
-  var currChar;
-  var mulligan = false;
-  var isPerm = true;
-  // pump characters in, spaces not counted, all lowercase
-  string.split('').forEach((char) => {
-    if (char !== ' ') {
-      currChar = char.toLowerCase();
-      if (chars[currChar] === undefined) {
-        chars[currChar] = 0;
+/**
+ * check if a permutation of a string is a palimdrome
+ * @param {*} str
+ */
+
+const palimdromePermutation = str => {
+  if (!str) return false; // if the str is blank just return false
+  // keep a counter of character frequency
+  str = str.toLowerCase();
+  const counter = {};
+  for (const ch of str) {
+    if (counter[ch]) counter[ch] += 1;
+    else counter[ch] = 1;
+  }
+  // create an array of all frequencies from our frequency object/hashmap
+  const values = Object.values(counter);
+  // if the len of the string is odd, then we can have one odd modulus frequency
+  if (str.length % 2 === 1) {
+    let foundOne = false;
+    for (const totalCnt of values) {
+      if (totalCnt % 2 === 1) {
+        // if foundOne var is already two, means we have two odd modulus frequencies
+        // so we return false
+        if (foundOne) return false;
+        // else make foundOne true
+        else foundOne = true;
       }
-      chars[currChar]++;
     }
-  });
-  // check that all chars are even count, except for one exception
-  Object.keys(chars).forEach((char) => {
-    if (chars[char] % 2 > 0) {
-    // if more than one exception, return false
-      if (mulligan) {
-        isPerm = false; // return in a forEach statment doesn't flow out of function scope
-      } else {
-        mulligan = true;
-      }
-    }
-  });
-  // if not return true
-  return isPerm;
+    return true;
+  } else {
+    // if the str len is even, then every frequency most be even
+    return values.every(x => x % 2 === 0);
+  }
 };
 
-// TESTS
-console.log(palinPerm('Tact Coa'), 'true');
-console.log(palinPerm('Tact boa'), 'false');
+module.exports = {
+  palimdromePermutation,
+};
