@@ -1,4 +1,4 @@
-const { urlify } = require('./urlifyes6');
+const { urlify } = require('./urlify');
 
 describe('urlify tests', () => {
   test('should transform text', () => {
