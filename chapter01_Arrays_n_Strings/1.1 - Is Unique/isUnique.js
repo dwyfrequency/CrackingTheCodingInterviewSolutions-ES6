@@ -1,3 +1,5 @@
+// check string for all unique characters with out using any
+// additional data structures
 var allUniqueCharsES5 = function(string) {
   // O(n^2) approach, no additional data structures used
   // for each character, check remaining characters for duplicates
