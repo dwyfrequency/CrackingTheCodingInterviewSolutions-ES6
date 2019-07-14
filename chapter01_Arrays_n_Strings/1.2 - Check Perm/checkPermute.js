@@ -1,6 +1,6 @@
 // Time O(n log(n)) | Space O(n)
 // n log(n) b/c of the sort -> merge sort/quick sort is average case n log(n)
-var checkPermuteEs5 = function(stringOne, stringTwo) {
+var checkPermuteSlow = function(stringOne, stringTwo) {
   // if different lengths, return false
   if (stringOne.length !== stringTwo.length) {
     return false;
