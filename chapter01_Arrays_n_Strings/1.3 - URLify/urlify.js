@@ -5,6 +5,7 @@
  * hold the additional characters, and that you are given the "true"
  * length of the string.
  */
+// Time O(n) | Space O(n)
 const urlify = (str, len) => {
   const strArr = [];
   for (let i = 0; i < len; i++) {
