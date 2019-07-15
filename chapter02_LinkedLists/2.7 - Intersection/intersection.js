@@ -1,4 +1,4 @@
-var LinkedList = require('./../util/LinkedList');
+var LinkedList = require('../util/SinglyLinkedList');
 
 var peek = function(stack) {
   return stack[stack.length - 1];
@@ -7,7 +7,7 @@ var peek = function(stack) {
 var intersection = function(head1, head2) {
   var stack1 = [];
   var stack2 = [];
-  
+
   while (head1 !== null) {
     stack1.push(head1);
     head1 = head1.next;

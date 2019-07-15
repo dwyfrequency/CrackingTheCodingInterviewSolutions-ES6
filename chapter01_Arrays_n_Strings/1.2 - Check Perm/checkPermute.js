@@ -45,10 +45,3 @@ const checkPermute = (str1, str2) => {
 module.exports = {
   checkPermute,
 };
-
-// Tests
-console.log(checkPermute('aba', 'aab'), true);
-
-console.log(checkPermute('aba', 'aaba'), false);
-
-console.log(checkPermute('aba', 'aa'), false);
