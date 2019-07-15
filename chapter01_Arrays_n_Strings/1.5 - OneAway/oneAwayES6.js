@@ -29,6 +29,8 @@ const oneAway = (str1, str2) => {
     if (frequencyCnt[ch]) frequencyCnt[ch] -= 1;
     else if (frequencyCnt[ch] <= 0) frequencyCnt[ch] -= 1;
   }
+  // if the total changes is less than 2, then we can meet the requirements
+  // with one update
   const totalChanges = Object.values(frequencyCnt).reduce(
     (accum, freqCnt) => accum + Math.abs(freqCnt),
     0
