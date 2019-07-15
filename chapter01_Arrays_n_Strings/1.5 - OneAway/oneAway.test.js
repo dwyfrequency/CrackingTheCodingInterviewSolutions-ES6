@@ -20,8 +20,11 @@ describe('oneAway tests', () => {
   test('should return false', () => {
     expect(oneAway('ach', 'jack')).toBe(false);
   });
+  test('should return false', () => {
+    expect(oneAway('zac', 'jack')).toBe(false);
+  });
   test('should return true', () => {
-    expect(oneAway('zac', 'jack')).toBe(true);
+    expect(oneAway('jac', 'jack')).toBe(true);
   });
 
   // testing case insensitivity
