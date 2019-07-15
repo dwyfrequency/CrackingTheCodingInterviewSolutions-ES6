@@ -1,7 +1,7 @@
 // if doubly - move to middle, and then extend front and back to check
 // if singly - make a reversed linkedlist from the first half
 
-var LinkedList = require('./../util/LinkedList');
+var LinkedList = require('./../util/LinkedListNode');
 
 var palindrome = function(head) {
   var mid = head;
@@ -31,18 +31,17 @@ var palindrome = function(head) {
     mid = mid.next;
   }
 
-  while(mid !== null) {
+  while (mid !== null) {
     // console.log(mid.value, firstHalf.value);
     if (mid.value !== firstHalf.value) {
       return false;
     }
     mid = mid.next;
-    if (firstHalf!== null) {
+    if (firstHalf !== null) {
       firstHalf = firstHalf.next;
     }
   }
   return true;
-
 };
 
 /* TEST */

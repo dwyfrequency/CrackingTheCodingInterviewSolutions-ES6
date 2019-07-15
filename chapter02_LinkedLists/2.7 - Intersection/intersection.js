@@ -1,4 +1,4 @@
-var LinkedList = require('../util/SinglyLinkedList');
+var LinkedList = require('./../util/LinkedListNode');
 
 var peek = function(stack) {
   return stack[stack.length - 1];

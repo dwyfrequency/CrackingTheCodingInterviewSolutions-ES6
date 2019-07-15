@@ -1,6 +1,6 @@
-var LinkedList = require('./../util/LinkedList');
+var LinkedList = require('./../util/LinkedListNode');
 
-var loopDetection = (head) => {
+var loopDetection = head => {
   var hare = head;
   var tortoise = head;
   while (hare !== null) {
