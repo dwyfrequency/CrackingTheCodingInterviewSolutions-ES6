@@ -29,4 +29,19 @@ describe('removeDups tests', () => {
     console.log(nodeA);
     expect(nodeA).toEqual(node1);
   });
+  test('should ', () => {
+    const nodeA = new Node('a');
+    const node2 = new Node('b');
+    const node3 = new Node('c');
+    const node4 = new Node('d');
+    const node5 = new Node('e');
+    const dupNode = new Node('b');
+    nodeA.next = node2;
+    node2.next = dupNode;
+    dupNode.next = node3;
+    node3.next = node4;
+    node4.next = node5;
+    removeDups(nodeA);
+    expect(nodeA).toEqual(node1);
+  });
 });
