@@ -1,3 +1,3 @@
-describe('Testing returnKthToLast', () => {
-  test('should ', () => {});
-});
+const returnKthToLast = (node, n) => {};
+
+module.exports = returnKthToLast;
