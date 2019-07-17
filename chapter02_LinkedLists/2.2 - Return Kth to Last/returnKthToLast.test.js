@@ -22,4 +22,7 @@ describe('Testing returnKthToLast', () => {
   test('should return the head node', () => {
     expect(returnKthToLast(node1, 5)).toEqual(node1);
   });
+  test('should return the second from head node', () => {
+    expect(returnKthToLast(node1, 4)).toEqual(node1.next);
+  });
 });
