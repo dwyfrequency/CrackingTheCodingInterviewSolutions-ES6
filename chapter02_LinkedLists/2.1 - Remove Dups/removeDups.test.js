@@ -14,7 +14,7 @@ describe('removeDups tests', () => {
     node3.next = node4;
     node4.next = node5;
   });
-  test('should ', () => {
+  test('should remove duplicate value b at tail', () => {
     const nodeA = new Node('a');
     const node2 = new Node('b');
     const node3 = new Node('c');
@@ -29,7 +29,7 @@ describe('removeDups tests', () => {
     console.log(nodeA);
     expect(nodeA).toEqual(node1);
   });
-  test('should ', () => {
+  test('should remove duplicate values b in middle', () => {
     const nodeA = new Node('a');
     const node2 = new Node('b');
     const node3 = new Node('c');
