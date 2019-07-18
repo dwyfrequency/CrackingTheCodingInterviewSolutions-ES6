@@ -2,8 +2,8 @@ const returnKthToLast = (node, n) => {
   let leftMostNode = node;
   let currentNode = node;
   // 2
-  // (a) -> (b) -> (c)
-  for (let i = 0; i < n; i++) {
+  // (a) -> (b) -> (c) -> null
+  for (let i = 1; i <= n; i++) {
     currentNode = currentNode.next;
   }
   if (currentNode === null) {
@@ -14,7 +14,7 @@ const returnKthToLast = (node, n) => {
     currentNode = currentNode.next;
     leftMostNode = leftMostNode.next;
   }
-  return currentNode;
+  return leftMostNode;
 };
 
 module.exports = returnKthToLast;
